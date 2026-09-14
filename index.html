@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رفيق طالب S.N.V PRO 🇩🇿</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Arial,sans-serif}
+body{background:#f4f7f5;color:#1a2e25}
+header{background:linear-gradient(135deg,#0a5c3c,#12946a);color:#fff;padding:16px;text-align:center}
+h1{font-size:1.4rem}header p{opacity:.9;font-size:.82rem;margin-top:3px}
+nav{display:flex;justify-content:center;gap:5px;flex-wrap:wrap;background:#fff;padding:9px;position:sticky;top:0;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+nav button{border:none;background:none;padding:8px 12px;border-radius:20px;cursor:pointer;font-size:.86rem;font-weight:600;color:#556}
+nav button.on,nav button:hover{background:#0d7a4f;color:#fff}
+main{max-width:900px;margin:0 auto;padding:18px 13px 60px}
+.sec{display:none}.sec.on{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:13px}
+.c{background:#fff;border-radius:14px;padding:15px;box-shadow:0 2px 10px rgba(0,0,0,.06);border-right:4px solid #0d7a4f;cursor:pointer}
+.c h3{color:#0a5c3c;margin-bottom:5px;font-size:1rem}.c small{color:#678}
+.hero{background:linear-gradient(135deg,#0a5c3c,#12946a);color:#fff;border-radius:16px;padding:22px;text-align:center;margin-bottom:16px}
+.stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.stat{background:rgba(255,255,255,.15);border-radius:10px;padding:7px 15px}.stat b{font-size:1.2rem;display:block}
+h2.t{color:#0a5c3c;margin:5px 0 14px;border-bottom:2px solid #e6f4ee;padding-bottom:8px}
+.tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.tabs button{border:1.5px solid #0d7a4f;background:#fff;color:#0a5c3c;padding:5px 12px;border-radius:18px;cursor:pointer;font-weight:600;font-size:.83rem}
+.tabs button.on{background:#0d7a4f;color:#fff}
+.mr{display:flex;justify-content:space-between;background:#fff;padding:11px 15px;border-radius:10px;margin-bottom:8px}
+.coef{background:#e6f4ee;color:#0a5c3c;padding:3px 11px;border-radius:14px;font-size:.76rem;font-weight:700}
+.sb{width:100%;padding:11px 15px;border:2px solid #e6f4ee;border-radius:12px;font-size:1rem;margin-bottom:12px;outline:none}
+.sb:focus{border-color:#0d7a4f}
+.gi{background:#fff;border-radius:10px;padding:11px 14px;margin-bottom:8px;cursor:pointer}
+.gi b{color:#0a5c3c}.fr{color:#d4a017;font-weight:600;font-size:.86rem}
+.tag{background:#e6f4ee;color:#0a5c3c;font-size:.68rem;padding:2px 8px;border-radius:10px;float:left;margin-left:6px}
+.cr{display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:7px;margin-bottom:7px}
+.cr input{padding:8px;border:1.5px solid #ccd;border-radius:8px;font-size:.9rem}
+.cr .del{background:#e5484d;color:#fff;border:none;border-radius:8px;cursor:pointer}
+.btn{background:#0d7a4f;color:#fff;border:none;padding:10px 18px;border-radius:10px;cursor:pointer;font-size:.95rem;font-weight:700;margin:4px}
+.btn.g{background:#d4a017}
+.res{margin-top:14px;padding:16px;border-radius:14px;text-align:center;background:#e6f4ee;border:2px solid #0d7a4f}
+.res .moy{font-size:2.2rem;font-weight:800;color:#0a5c3c}
+.bd{display:inline-block;padding:5px 15px;border-radius:20px;font-weight:700;margin-top:6px}
+.p{background:#0d7a4f;color:#fff}.fl{background:#e5484d;color:#fff}
+.qb{background:#fff;border-radius:16px;padding:18px;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.qb h3{color:#0a5c3c;margin-bottom:10px}
+.opt{display:block;width:100%;text-align:right;padding:10px 14px;margin-bottom:8px;border:2px solid #dde;border-radius:10px;background:#fff;cursor:pointer;font-size:.94rem}
+.opt.ok{border-color:#0d7a4f;background:#d3f0e2}.opt.no{border-color:#e5484d;background:#fde3e4}
+.pb{height:8px;background:#e6f4ee;border-radius:6px;margin-bottom:12px;overflow:hidden}
+.pb div{height:100%;background:#0d7a4f}
+.fin{text-align:center;padding:26px 0}.fin .big{font-size:2.6rem;font-weight:800;color:#0d7a4f}
+.fc{background:#fff;border-radius:18px;padding:30px 22px;min-height:200px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;cursor:pointer;border-top:5px solid #0d7a4f;max-width:560px;margin:0 auto}
+.fc .term{font-size:1.5rem;font-weight:800;color:#0a5c3c;margin-bottom:8px}
+.fc .ans{display:none;line-height:1.7}
+.fc.flt .term,.fc.flt .hint{display:none}.fc.flt .ans{display:block}
+.hint{color:#89a;font-size:.83rem;margin-top:8px}
+.sp{background:#e6f4ee;color:#0a5c3c;border:1.5px solid #0d7a4f;border-radius:16px;padding:4px 12px;cursor:pointer;font-size:.78rem;font-weight:700;margin-top:6px}
+.msg{max-width:88%;padding:10px 14px;border-radius:14px;margin-bottom:8px;line-height:1.8;white-space:pre-wrap;font-size:.95rem}
+.mb{background:#e6f4ee;border-top-right-radius:2px}
+.mu{background:#0d7a4f;color:#fff;margin-left:auto;border-top-left-radius:2px}
+#chatLog{height:380px;overflow-y:auto;background:#fff;border-radius:14px;padding:14px;display:flex;flex-direction:column}
+#amsg{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);background:#0a5c3c;color:#fff;padding:10px 18px;border-radius:24px;font-size:.84rem;font-weight:700;z-index:99;display:none;max-width:92%;text-align:center}
+footer{text-align:center;color:#789;font-size:.8rem;padding:16px}
+</style>
+</head>
+<body>
+<header><h1>🧬 رفيق طالب S.N.V <span style="background:#d4a017;padding:2px 10px;border-radius:12px;font-size:.72rem">PRO</span></h1><p>علوم الطبيعة والحياة — الجامعات الجزائرية 🇩🇿 | نظام LMD</p></header>
+<nav>
+<button class="on" onclick="show('home',this)">🏠 الرئيسية</button>
+<button onclick="show('gloss',this)">📖 المصطلحات</button>
+<button onclick="show('flash',this)">🃏 البطاقات</button>
+<button onclick="show('courses',this)">📚 الوحدات</button>
+<button onclick="show('calc',this)">🧮 المعدل</button>
+<button onclick="show('qcm',this)">🧠 QCM</button>
+<button onclick="show('import',this)">⬇ استيراد</button>
+<button onclick="show('chat',this)">🤖 الروبوت</button>
+</nav>
+<main>
+<div id="home" class="sec on">
+<div class="hero"><h2>مرحباً بك أيها الطالب 👋</h2><p>قاموس + صوت عربي + بطاقات + اختبارات + روبوت ذكي</p>
+<div class="stats"><div class="stat"><b id="stg">0</b> مصطلح</div><div class="stat"><b>10</b> مجالات</div><div class="stat"><b id="stq">0</b> سؤال</div></div></div>
+<div class="grid">
+<div class="c" onclick="show('gloss',document.querySelectorAll('nav button')[1])"><h3>📖 القاموس</h3><small>اضغط أي مصطلح ليُقرأ بالعربية 🔊 والفرنسي بالضغط عليه</small></div>
+<div class="c" onclick="show('flash',document.querySelectorAll('nav button')[2])"><h3>🃏 بطاقات المراجعة</h3><small>اقلب البطاقة لكشف الشرح</small></div>
+<div class="c" onclick="show('courses',document.querySelectorAll('nav button')[3])"><h3>📚 الوحدات الدراسية</h3><small>S1 إلى S6 بالمعاملات</small></div>
+<div class="c" onclick="show('calc',document.querySelectorAll('nav button')[4])"><h3>🧮 حاسبة المعدل</h3><small>معدلك بالمعاملات فوراً</small></div>
+<div class="c" onclick="show('qcm',document.querySelectorAll('nav button')[5])"><h3>🧠 اختبار QCM</h3><small>أسئلة اختيار من متعدد</small></div>
+<div class="c" onclick="show('import',document.querySelectorAll('nav button')[6])"><h3>⬇ استيراد بالجملة</h3><small>أضف آلاف المصطلحات + تصدير</small></div>
+</div>
+</div>
+<div id="gloss" class="sec">
+<h2 class="t">📖 القاموس العلمي</h2>
+<div class="tabs" id="ct"></div>
+<input class="sb" id="q" placeholder="🔍 ابحث عربي أو فرنسي..." oninput="rg()">
+<p style="color:#0a5c3c;font-size:.84rem;margin:-4px 0 10px">🔊 اضغط على المصطلح العربي = الشرح بالعربية • على الفرنسي = نطقه بالفرنسية — <button class="sp" onclick="tst()">🔊 تجربة</button></p>
+<div id="gl"></div>
+</div>
+<div id="flash" class="sec">
+<h2 class="t">🃏 بطاقات المراجعة — اضغط لقلب البطاقة</h2>
+<div class="tabs" id="ft"></div>
+<div class="fc" id="fcc" onclick="this.classList.toggle('flt')"></div>
+<div style="display:flex;justify-content:center;gap:8px;margin-top:14px">
+<button class="btn" onclick="fm(1)">⏭ التالي</button><button class="btn g" onclick="fm(-1)">⏮ السابق</button><button class="btn" onclick="fsh()">🔀 خلط</button>
+</div>
+<div style="text-align:center;color:#678;margin-top:8px;font-size:.87rem" id="fcn2"></div>
+</div>
+<div id="courses" class="sec">
+<h2 class="t">📚 الوحدات حسب الفصل</h2>
+<div class="tabs" id="st"></div><div id="ml"></div>
+</div>
+<div id="calc" class="sec">
+<h2 class="t">🧮 حاسبة المعدل الفصلي</h2>
+<div id="crs"></div>
+<button class="btn g" onclick="arw()">➕ وحدة</button><button class="btn" onclick="cm()">📊 احسب</button>
+<div id="cr2"></div>
+</div>
+<div id="import" class="sec">
+<h2 class="t">⬇ استيراد مصطلحات بالجملة</h2>
+<p style="color:#678;margin-bottom:10px">كل سطر: <b>عربي | فرنسي | الشرح</b> — الصق آلاف المصطلحات 🚀</p>
+<input class="sb" id="ic" placeholder="اسم المجال (مثال: الخلية)">
+<textarea id="it" style="width:100%;min-height:160px;border:2px solid #e6f4ee;border-radius:12px;padding:12px;font-size:.93rem;outline:none" placeholder="السيتوبلازم | Cytoplasme | وسط الخلية"></textarea>
+<button class="btn" onclick="imp()">⬆ استيراد</button><button class="btn g" onclick="exp()">⬇ تصدير الكل</button>
+<div id="im" style="margin-top:8px;color:#0a5c3c;font-weight:700"></div>
+</div>
+<div id="chat" class="sec">
+<h2 class="t">🤖 روبوت S.N.V — اسألني أي سؤال علمي</h2>
+<div id="chatLog"></div>
+<div id="chips" style="display:flex;gap:6px;flex-wrap:wrap;margin:10px 0"></div>
+<div style="background:#fff;border-radius:12px;padding:10px;margin-bottom:10px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+<b style="font-size:.85rem;color:#0a5c3c">⚡ الذكاء الكامل:</b>
+<input id="ak" type="password" class="sb" style="flex:1;min-width:160px;margin:0;padding:7px 10px;font-size:.85rem" placeholder="مفتاح Gemini مجاني (aistudio.google.com)">
+<button class="btn" style="margin:0;padding:7px 14px;font-size:.85rem" onclick="saveKey()">🔗 ربط</button>
+<span id="ast" style="font-size:.78rem;color:#678">بدون مفتاح: ذكاء محلي متخصص في S.N.V</span>
+</div>
+<div style="display:flex;gap:8px">
+<input id="ci" class="sb" style="margin:0;flex:1" placeholder="اسأل أي شيء... مثال: اشرح لي المتقدرة" onkeydown="if(event.key==='Enter')send()">
+<button class="btn" style="margin:0" onclick="send()">إرسال ➤</button>
+</div>
+</div>
+<div id="qcm" class="sec">
+<h2 class="t">🧠 اختبار المعرفة</h2>
+<div class="qb" id="qb"></div>
+</div>
+</main>
+<footer>صُنع بحب لطلبة S.N.V في الجزائر 🇩🇿 — بالتوفيق 🌿</footer>
+<div id="amsg"></div>
+<script>
+function show(i,b){document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));document.getElementById(i).classList.add('on');document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on'));if(b)b.classList.add('on');window.scrollTo(0,0)}
+var GL=[
+["الانقسام المتساوي","Mitose","انقسام الخلية إلى خليتين متماثلتين وراثياً (2n→2n) للنمو والتجدد.","الخلية"],
+["الانقسام الاختزالي","Méiose","انقسام يقلص الكروموسومات للنصف (2n→n) لتكوين الأمشاج.","الخلية"],
+["النواة","Noyau","مركز الخلية؛ تحوي الـ ADN وتنظم النشاط الجيني.","الخلية"],
+["الغشاء البلازمي","Membrane plasmique","غشاء مزدوج منفذ انتقائياً ينظم مرور المواد.","الخلية"],
+["السيتوبلازم","Cytoplasme","الوسط بين الغشاء والنواة تحدث فيه معظم التفاعلات.","الخلية"],
+["المتقدرة","Mitochondrie","عضية إنتاج الطاقة ATP؛ لها ADN خاص.","الخلية"],
+["الريبوسوم","Ribosome","عضية تصنيع البروتينات.","الخلية"],
+["جهاز كولجي","Appareil de Golgi","تعديل وتغليف وفرز البروتينات.","الخلية"],
+["الليزوسوم","Lysosome","عضية هاضمة بأنزيمات محللة.","الخلية"],
+["الشبكة الإندوبلازمية","Réticulum endoplasmique","خشنة تصنع البروتين، ملساء تصنع الليبيدات.","الخلية"],
+["البلاستيدة الخضراء","Chloroplaste","عضية البناء الضوئي؛ تحوي الكلوروفيل.","الخلية"],
+["الجدار الخلوي","Paroi cellulaire","غلاف صلب من السيلولوز في الخلية النباتية.","الخلية"],
+["الفجوة","Vacuole","تخزين الماء والمواد؛ ضخمة في الخلية النباتية.","الخلية"],
+["موت الخلية المبرمج","Apoptose","موت خلوي منظم دون التهاب.","الخلية"],
+["الخلايا الجذعية","Cellules souches","خلايا غير متمايزة تتحول لأنواع خلوية مختلفة.","الخلية"],
+["الخلايا السرطانية","Cellules cancéreuses","خلايا تفلت من الضبط: انقسام لا نهائي.","الخلية"],
+["الإنزيم","Enzyme","محفّز حيوي بروتيني يسرّع التفاعلات دون أن يُستهلك.","الكيمياء الحيوية"],
+["تحلل السكر","Glycolyse","تفكيك الجلوكوز في الهيولى إلى بيروفات بصفاء 2 ATP.","الكيمياء الحيوية"],
+["حلقة كريبس","Cycle de Krebs","دورة أكسدة الأسيتيل في المتقدرة لاستخراج الطاقة.","الكيمياء الحيوية"],
+["التخمر","Fermentation","أكسدة لا هوائية للجلوكوز (لاكتيكية أو كحولية).","الكيمياء الحيوية"],
+["ATP","Adénosine triphosphate","عملة الطاقة في الخلية.","الكيمياء الحيوية"],
+["الأحماض الأمينية","Acides aminés","مونومرات البروتين؛ 20 نوعاً ترتبط برابطة ببتيدية.","الكيمياء الحيوية"],
+["الركيزة","Substrat","المادة التي يعمل عليها الإنزيم.","الكيمياء الحيوية"],
+["المثبط التنافسي","Inhibiteur compétitif","يشبه الركيزة ويرتبط بالموقع النشط؛ يزاح بزيادة الركيزة.","الكيمياء الحيوية"],
+["الأميليز","Amylase","يفكك النشا إلى مالتوز؛ في اللعاب.","الكيمياء الحيوية"],
+["البيتا أكسدة","Bêta-oxydation","تفكيك الأحماض الدهنية إلى أسيتيل CoA في المتقدرة.","الكيمياء الحيوية"],
+["حلقة اليوريا","Cycle de l'urée","دورة كبدية تحوّل الأمونياك السام إلى يوريا.","الكيمياء الحيوية"],
+["اختبار بينيديكت","Benedict","يكشف السكريات المختزلة بلون برتقالي.","الكيمياء الحيوية"],
+["كاشف اللوغول","Lugol","يكشف النشا بلون أزرق داكن.","الكيمياء الحيوية"],
+["اختبار البيوريت","Biuret","يكشف البروتين بلون بنفسجي.","الكيمياء الحيوية"],
+["الADN","ADN","حلزون مزدوج حامل المعلومة الوراثية (A-T و G-C).","الجزيئية والوراثة"],
+["الـ ARNm","ARNm","نسخة من الجين تُترجم إلى بروتين.","الجزيئية والوراثة"],
+["النسخ","Transcription","تصنيع ARNm من قالب ADN.","الجزيئية والوراثة"],
+["الترجمة","Traduction","تحويل شفرة ARNm إلى أحماض أمينية.","الجزيئية والوراثة"],
+["الجين","Gène","مقطع ADN يحمل صفة وراثية.","الجزيئية والوراثة"],
+["الطفرة","Mutation","تغيّر مفاجئ في تسلسل ADN.","الجزيئية والوراثة"],
+["الأليل","Allèle","نسخة من الجين تحدد صفة معينة.","الجزيئية والوراثة"],
+["قوانين مندل","Lois de Mendel","التصافي والفصل: أساس توريث الصفات.","الجزيئية والوراثة"],
+["النسخ المتماثل","Réplication","نسخ ADN نصف محافظ قبل الانقسام.","الجزيئية والوراثة"],
+["البكتيريا","Bactérie","كائن دقيق بدائي النواة أحادي الخلية.","الأحياء الدقيقة"],
+["صبغة كرام","Coloration de Gram","تصنيف البكتيريا: موجبة بنفسجية، سالبة وردية.","الأحياء الدقيقة"],
+["الفيروس","Virus","عامل معدٍ لا يتكاثر إلا داخل خلية حية.","الأحياء الدقيقة"],
+["المضادات الحيوية","Antibiotiques","مواد تكبح أو تقتل البكتيريا (البنسلين).","الأحياء الدقيقة"],
+["العوامل الممرضة","Pathogène","كائنات دقيقة تسبب المرض.","الأحياء الدقيقة"],
+["التعقيم","Stérilisation","إتلاف كل الميكروبات قبل الاستعمال.","الأحياء الدقيقة"],
+["الجهاز المناعي","Système immunitaire","شبكة خلايا وأعضاء تدافع عن الجسم.","المناعة"],
+["الجسم المضاد","Anticorps","بروتين من خلايا B يتحد مع المستضد ويحيّده.","المناعة"],
+["المستضد","Antigène","جزيء غريب يستفز استجابة مناعية.","المناعة"],
+["المناعة الطبيعية","Immunité innée","دفاع فوري غير نوعي: جلد، بلعم، التهاب.","المناعة"],
+["المناعة المكتسبة","Immunité acquise","استجابة نوعية لها ذاكرة.","المناعة"],
+["الخلايا اللمفاوية B","Lymphocytes B","تنتج الأجسام المضادة وخلايا الذاكرة.","المناعة"],
+["اللقاح","Vaccin","مستضد مضعّف يمنح مناعة وذاكرة.","المناعة"],
+["التوازن الداخلي","Homéostasie","حفظ بيئة داخلية ثابتة (حرارة، pH، سكر).","الفيزيولوجيا"],
+["العصبون","Neurone","وحدة الجهاز العصبي: جسم، محوار، شجيرات.","الفيزيولوجيا"],
+["المشبك العصبي","Synapse","تواصل عصبونين عبر نواقل كيميائية.","الفيزيولوجيا"],
+["الهيموغلوبين","Hémoglobine","بروتين الكريات الحمراء الحامل للأكسجين.","الفيزيولوجيا"],
+["الكلية","Rein","تصفي الدم وتكوّن البول وتنظم الماء والأملاح.","الفيزيولوجيا"],
+["الترشيح الكلوي","Filtration glomérulaire","ترشيح الدم في الكبيبة؛ بداية البول.","الفيزيولوجيا"],
+["الأنسولين","Insuline","هرمون البنكرياس الخافض لسكر الدم.","الفيزيولوجيا"],
+["القلب","Cœur","مضخة مزدوجة ~70 نبضة في الدقيقة.","الفيزيولوجيا"],
+["النيفرون","Néphron","الوحدة الوظيفية للكلية (~مليون).","الفيزيولوجيا"],
+["الأدرينالين","Adrénaline","هرمون القتال والهروب: يرفع النبض والسكر.","الفيزيولوجيا"],
+["البناء الضوئي","Photosynthèse","ضوء + CO₂ + ماء ← جلوكوز + أكسجين.","النبات"],
+["الكلوروفيل","Chlorophylle","الصبغة الخضراء الماصة للضوء.","النبات"],
+["حلقة كالفن","Cycle de Calvin","تثبيت CO₂ باستعمال ATP وNADPH.","النبات"],
+["الثغور","Stomates","فتحات لتبادل الغازات وتنظيم الماء.","النبات"],
+["الخشب واللحاء","Xylème / Phloème","ناقلات: ماء وأملاح صعوداً / غذاء مصنوع.","النبات"],
+["التوترة","Turgescence","امتلاء الفجوة بالماء ودفع الغشاء للجدار.","النبات"],
+["الانحلال البلازمي","Plasmolyse","انفصال الغشاء عن الجدار في وسط مركّز.","النبات"],
+["النسيج الطلائي","Tissu épithélial","يغطي الأسطح؛ حماية وامتصاص وإفراز.","الحيوان والتشريح"],
+["النسيج الضام","Tissu conjonctif","يربط ويدعم: عظام، غضاريف، دم.","الحيوان والتشريح"],
+["الطبقات الجرثومية","Feuillets embryonnaires","إكتودرم، ميزودرم، إندودرم؛ منها الأعضاء.","الحيوان والتشريح"],
+["التشقق","Segmentation","انقسامات سريعة للبيضة الملقحة.","الحيوان والتشريح"],
+["النظام البيئي","Écosystème","مجتمع حي + بيئة غير حية تتبادلان الطاقة.","البيئة"],
+["السلسلة الغذائية","Chaîne alimentaire","منتج ← مستهلك ← محلل.","البيئة"],
+["التنوع الحيوي","Biodiversité","تنوع الأنواع والجينات والنظم البيئية.","البيئة"],
+["التصحر","Désertification","تدهور الأراضي الجافة؛ مشكلة في الجزائر.","البيئة"],
+["الخاصية الأسموزية","Osmose","انتقال الماء عبر غشاء نصف منفذ نحو الأكثر تركيزاً.","الفيزياء الحيوية"],
+["الانتشار","Diffusion","حركة الجزيئات من المركز إلى الأقل تركيزاً.","الفيزياء الحيوية"],
+["النقل الفعال","Transport actif","نقل ضد التدرج بطاقة ATP.","الفيزياء الحيوية"],
+["الطرد المركزي","Centrifugation","فصل مكونات الخلية حسب الكثافة.","الفيزياء الحيوية"],
+["المحلول المنظم","Solution tampon","يحفظ pH ثابتاً (مخزن الدم البيكاربوناتي).","الفيزياء الحيوية"],
+["الأس الهيدروجيني","pH","مقياس الحمضية؛ دم الإنسان 7.35-7.45.","الفيزياء الحيوية"]
+];
+var gi=GL.map(function(g){return{a:g[0],f:g[1],d:g[2],c:g[3]}});
+var gc="الكل";
+function bc(){var t=document.getElementById('ct');t.innerHTML='';["الكل","الخلية","الكيمياء الحيوية","الجزيئية والوراثة","الأحياء الدقيقة","المناعة","الفيزيولوجيا","النبات","الحيوان والتشريح","البيئة","الفيزياء الحيوية"].forEach(function(c){var b=document.createElement('button');b.textContent=c+" ("+(c==="الكل"?gi.length:gi.filter(function(x){return x.c===c}).length)+")";b.onclick=function(){t.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');gc=c;rg()};if(c===gc)b.classList.add('on');t.appendChild(b)})}
+function rg(){var q=document.getElementById('q').value.trim().toLowerCase();var l=gi.filter(function(x){return(gc==="الكل"||x.c===gc)&&(!q||x.f.toLowerCase().includes(q)||x.a.includes(q))});document.getElementById('gl').innerHTML=l.length?l.map(function(x){return '<div class="gi" data-a="'+x.a+'" data-d="'+x.d+'" onclick="spk(this.dataset.a+\' . \'+this.dataset.d,\'ar\')"><span class="tag">'+x.c+'</span><b>'+x.a+' 🔊</b> <span class="fr" onclick="event.stopPropagation();spk(\''+x.f.replace(/'/g,"\\'")+'\',\'fr\')">'+x.f+' 🔊</span><br><small>'+x.d+'</small></div>'}).join(''):'<p style="text-align:center;color:#89a;padding:30px">لا توجد نتائج 😕</p>'}
+bc();rg();document.getElementById('stg').textContent=gi.length;
+var ok_tts=('speechSynthesis' in window),vs=[];
+function rv(){if(ok_tts)vs=speechSynthesis.getVoices()||[]}
+if(ok_tts){rv();speechSynthesis.onvoiceschanged=rv;setTimeout(rv,500)}
+function bestVoice(p){var best=null,bs=-1;vs.forEach(function(v){if(!v.lang||!v.lang.toLowerCase().indexOf(p)&&v.lang.toLowerCase().indexOf(p)!==0)return;var s=0,n=(v.name||'').toLowerCase();if(n.indexOf('natural')>=0)s+=100;if(n.indexOf('premium')>=0||n.indexOf('enhanced')>=0)s+=70;if(n.indexOf('neural')>=0)s+=60;if(n.indexOf('google')>=0)s-=80;if(v.localService)s+=40;if(s>bs){bs=s;best=v}});return best}
+function spk(t,lg){if(!t||!ok_tts)return;rv();speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t);var p=lg==='fr'?'fr':'ar';u.lang=p==='fr'?'fr-FR':'ar-SA';u.rate=.9;var v=bestVoice(p);if(v){u.voice=v;u.lang=v.lang}setTimeout(function(){try{speechSynthesis.speak(u)}catch(e){}},80)}
+function tst(){spk('مرحباً، نظام الصوت يعمل بشكل سليم','ar')}
+var fl=[],fi=0;
+function bft(){var t=document.getElementById('ft');t.innerHTML='';["الكل"].concat(Object.keys(gi.reduce(function(o,x){o[x.c]=1;return o},{}))).forEach(function(c){var b=document.createElement('button');b.textContent=c;b.onclick=function(){t.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');fl=gi.filter(function(x){return c==="الكل"||x.c===c}).slice();fsh()};if(c==="الكل")b.classList.add('on');t.appendChild(b)})}
+function fsh(){fl.sort(function(){return Math.random()-.5});fi=0;rf()}
+function rf(){var c=document.getElementById('fcc'),x=fl[fi];if(!x){c.innerHTML="<b>لا توجد بطاقات</b>";return}c.classList.remove('flt');c.innerHTML='<div class="term" onclick="event.stopPropagation();spk(fl[fi].a,\'ar\')">'+x.a+' 🔊</div><div class="fr" onclick="event.stopPropagation();spk(\''+x.f.replace(/'/g,"\\'")+'\',\'fr\')">'+x.f+' 🔊</div><div class="hint">👆 اضغط لكشف الشرح</div><div class="ans">'+x.d+'</div>';document.getElementById('fcn2').textContent='بطاقة '+(fi+1)+' من '+fl.length}
+function fm(d){fi=(fi+d+fl.length)%fl.length;rf()}
+bft();fsh();
+var sems={"S1":[["Biologie cellulaire — الخلية",4],["Biophysique",3],["Chimie",3],["Mathématiques",2],["Informatique",2],["Terminologie",2]],"S2":[["Biochimie",4],["Biologie moléculaire",3],["Botanique",3],["Zoologie",3],["Biostatistique",2],["Anglais",1]],"S3":[["Microbiologie",4],["Biochimie métabolique",3],["Génétique",3],["Histologie",3],["Chimie organique",2],["TP",2]],"S4":[["Physiologie animale",4],["Physiologie végétale",3],["Immunologie",3],["Embryologie",3],["Écologie",2],["Informatique",1]],"S5":[["تخصص 1",4],["تخصص 2",4],["Biotechnologie",3],["Pathologie",3],["Méthodes d'analyse",2]],"S6":[["تخصص 3",4],["تخصص 4",4],["Gestion & Éthique",2],["مذكرة نهاية الدراسة",6]]};
+(function(){var t=document.getElementById('st');Object.keys(sems).forEach(function(k,i){var b=document.createElement('button');b.textContent=k;b.onclick=function(){t.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById('ml').innerHTML=sems[k].map(function(m){return '<div class="mr"><span>🧫 '+m[0]+'</span><span class="coef">معامل '+m[1]+'</span></div>'}).join('')};if(i===0)b.classList.add('on');t.appendChild(b)});document.getElementById('ml').innerHTML=sems.S1.map(function(m){return '<div class="mr"><span>🧫 '+m[0]+'</span><span class="coef">معامل '+m[1]+'</span></div>'}).join('')})();
+function arw(){var d=document.createElement('div');d.className='cr';d.innerHTML='<input placeholder="الوحدة"><input type="number" min="1" max="10" placeholder="معامل"><input type="number" min="0" max="20" step="0.25" placeholder="نقطة"><button class="del" onclick="this.parentNode.remove()">✕</button>';document.getElementById('crs').appendChild(d)}
+arw();arw();arw();
+function cm(){var s=0,co=0;document.querySelectorAll('#crs .cr').forEach(function(r){var i=r.querySelectorAll('input');var c=parseFloat(i[1].value),m=parseFloat(i[2].value);if(c>0&&m>=0){s+=c*m;co+=c}});var o=document.getElementById('cr2');if(!co){o.innerHTML='<div class="res" style="border-color:#e5484d">⚠️ أدخل المعاملات والنقاط</div>';return}var y=(s/co).toFixed(2),b,n;if(y>=16){b='<span class="bd p">🏆 ممتاز</span>';n='مستوى رائع!'}else if(y>=14){b='<span class="bd p">🎉 جيد جداً</span>';n='نتيجة قوية 💪'}else if(y>=12){b='<span class="bd p">👍 جيد</span>';n='يمكنك التحسين أكثر'}else if(y>=10){b='<span class="bd p">✅ ناجح</span>';n='راجع الوحدات الأضعف'}else{b='<span class="bd fl">❌ غير ناجح</span>';n='ستنجح في الدورة الثانية 🌱'}o.innerHTML='<div class="res"><div>معدلك الفصلي</div><div class="moy">'+y+' / 20</div>'+b+'<p style="margin-top:8px;color:#456">'+n+'</p></div>'}
+var Q=[["عضيّ إنتاج الطاقة ATP؟",["الريبوسوم","المتقدرة","النواة","كولجي"],1],["عدد الكروموسومات في الخلية البشرية الجسدية؟",["23","46","64","92"],1],["الانقسام الاختزالي ينتج خلايا:",["2n","n","3n","4n"],1],["قواعد الـ ADN:",["A-U و G-C","A-T و G-C","A-G و T-C","A-C و G-T"],1],["أين يحدث تحلل السكر؟",["النواة","الهيولى","المتقدرة","الريبوسوم"],1],["الأجسام المضادة تنتجها خلايا:",["T","B","حمراء","جلدية"],1],["نتائج البناء الضوئي:",["جلوكوز + أكسجين","CO2 + ماء","بروتين","دهون"],0],["البكتيريا كائن:",["حقيقي النواة","بدائي النواة","عديم","نباتي"],1],["الإنزيم يعمل كـ:",["متفاعل","محفّز حيوي","منتج","هرمون"],1],["الأسموزية: الماء ينتقل من وسط:",["مركّز لأقل","أقل تركيزاً لمركّز","عشوائي","بـ ATP"],1],["من يصنع البروتين؟",["الريبوسوم","الجدار","الفجوة","الليزوسوم"],0],["الكودون البادئ للترجمة:",["UAA","AUG","GGC","CCC"],1],["هرمون خفض سكر الدم:",["الغلوكاغون","الأنسولين","الأدرينالين","الثيروكسين"],1],["الوحدة الوظيفية للكلية:",["الألبولة","النيفرون","النوية","الكبيبة"],1],["مخزون السكر في الحيوان:",["النشا","السيلولوز","الجليكوجين","الساكاروز"],2],["نقل ضد التدرج يحتاج:",["انتشار","طاقة ATP","أسموزية","لا شيء"],1]];
+var qi=0,sc=0;
+function sq(){qi=0;sc=0;rq()}
+function rq(){var b=document.getElementById('qb');if(qi>=Q.length){var p=Math.round(sc/Q.length*100);b.innerHTML='<div class="fin"><div class="big">'+sc+'/'+Q.length+'</div><p style="font-weight:700;color:#0a5c3c">'+(p>=80?'🏆 ممتاز! جاهز للامتحان':p>=50?'👍 جيد، راجع الأخطاء':'📚 راجع القاموس وحاول مجدداً')+'</p><br><button class="btn" onclick="sq()">🔄 إعادة</button></div>';return}var q=Q[qi];b.innerHTML='<div class="pb"><div style="width:'+(qi/Q.length*100)+'%"></div></div><h3>سؤال '+(qi+1)+' من '+Q.length+' — النقاط: '+sc+' ⭐</h3><p style="margin-bottom:12px">'+q[0]+'</p>'+q[1].map(function(o,i){return '<button class="opt" onclick="an('+i+',this)">'+o+'</button>'}).join('')}
+function an(i,b){var q=Q[qi];document.querySelectorAll('.opt').forEach(function(x,j){x.disabled=true;if(j===q[2])x.classList.add('ok');else if(j===i)x.classList.add('no')});if(i===q[2])sc++;setTimeout(function(){qi++;rq()},1000)}
+sq();document.getElementById('stq').textContent=Q.length;
+function imp(){var c=document.getElementById('ic').value.trim()||"مستوردة";var l=document.getElementById('it').value.split('\n').filter(function(x){return x.trim()});var n=0;l.forEach(function(x){var p=x.split('|').map(function(y){return y.trim()});if(p[0]){gi.push({a:p[0],f:p[1]||"",d:p[2]||"",c:c});n++}});document.getElementById('im').textContent='✅ أضيف '+n+' مصطلحاً — الإجمالي: '+gi.length;document.getElementById('it').value='';bc();rg();document.getElementById('stg').textContent=gi.length;fl=gi.slice();fsh()}
+function exp(){document.getElementById('it').value=gi.map(function(x){return x.a+" | "+x.f+" | "+x.d}).join('\n');document.getElementById('im').textContent='📋 انسخ المصطلحات واحفظها في ملف نصي'}
+var KB=[
+["ميتوز mitose المتساوي","🔬 الانقسام المتساوي (Mitose): انقسام واحد ينتج خليتين متماثلتين (2n→2n) للنمو.\nالمراحل: ① التمهيدي: تكاثف الكروموسومات ② الاستوائي: اصطفاف ③ الانفصالي: انفصال الكروماتيدات ④ النهائي: نواتان ثم السيتوكينيز\n🧠 نقطة امتحان: احفظ ما يحدث في كل طور بالترتيب."],
+["ميوز meiose الاختزالي","🔬 الانقسام الاختزالي (Méiose): انقسامان ينتجان 4 خلايا بنصف العدد (2n→n) للأمشاج.\nفي التمهيدي الأول: «التبادل الوراثي» ← تنوع وراثي\n⚖️ الفرق عن الميتوز: انقسامان، نصف العدد، تنوع."],
+["الفرق الخلية النباتية الحيوانية","🔬 الفرق:\n🌱 النباتية: جدار سيلولوزي + بلاستيدات خضراء + فجوة مركزية كبيرة\n🐾 الحيوانية: بلا جدار ولا بلاستيدات، لها مريكزات"],
+["بناء ضوئي photosynthese","☀️ البناء الضوئي في البلاستيدات الخضراء:\n6CO₂ + 6H₂O + ضوء ← C₆H₁₂O₆ + 6O₂\n① الضوئية (تيلاكويد): شق الماء وATP وNADPH\n② كالفن (الستروما): تثبيت CO₂ ← جلوكوز\n🧠 مصدر الأكسجين هو الماء وليس CO₂!"],
+["تنفس خلوي respiration","🌬️ التنفس الخلوي: جلوكوز + O₂ ← ATP + CO₂ + ماء\n① تحلل السكر في الهيولى (2 ATP)\n② حلقة كريبس + السلسلة التنفسية في المتقدرة (~30-32 ATP)\nالتخمر: 2 ATP فقط بدون أكسجين."],
+["نصائح مذاكرة دراسة نجاح","نصائح النجاح 🌟:\n① ذاكر يومياً ولا تكدّس\n② ارسم المخططات بيدك\n③ استعمل «🃏 البطاقات» يومياً\n④ حل «🧠 QCM» بعد كل درس\n⑤ نم جيداً قبل الامتحان 🌙"],
+["مناهج برنامج السنة الاولى","السنة الأولى S.N.V:\n📘 S1: علم الخلية، الفيزياء الحيوية، الكيمياء، الرياضيات، المعلوميات\n📗 S2: الكيمياء الحيوية، البيولوجيا الجزيئية، النبات، الحيوان، الإحصاء\nافتح «📚 الوحدات» في الأعلى!"],
+["معدل حساب","المعدل = مجموع (النقطة × المعامل) ÷ مجموع المعاملات.\nافتح «🧮 المعدل»، والنجاح من 10/20."],
+["نظرية الخلية","نظرية الخلية:\n① كل كائن حي من خلية واحدة أو أكثر\n② الخلية وحدة البناء والوظيفة\n③ كل خلية من خلية سابقة"],
+];
+function nrm(s){return (s||"").toLowerCase().replace(/[أإآ]/g,"ا").replace(/ة/g,"ه").replace(/ى/g,"ي")}
+function addMsg(t,who){var log=document.getElementById('chatLog');var d=document.createElement('div');d.className='msg '+(who==='u'?'mu':'mb');log.appendChild(d);d.textContent=t;log.scrollTop=log.scrollHeight}
+function findKB(q){var n=nrm(q),best=null,bs=0;KB.forEach(function(e){var s=0;nrm(e[0]).split(' ').forEach(function(k){if(k.length>1&&n.indexOf(k)>=0)s+=3});gi.forEach(function(x){if(n.indexOf(nrm(x.a))>=0&&x.a.length>2)s+=2});if(s>bs){bs=s;best=e[1]}});gi.forEach(function(x){var s=0;nrm(x.a).split(' ').forEach(function(k){if(k.length>2&&n.indexOf(k)>=0)s+=3});if(x.f&&x.f.length>2&&n.indexOf(nrm(x.f))>=0)s+=4;if(s>bs){bs=s;best="📌 "+x.a+" ("+x.f+")\n\n"+x.d+"\n\n💡 اسأل عن مفهوم آخر أو اكتب «اختبرني»."}});return bs>=3?best:null}
+function botReply(q){var n=nrm(q);
+if(/^(ال)?(سلام|مرحبا|هلا|اهلا)/.test(n))return "مرحباً أيها الطالب! 👋 اسألني عن أي مفهوم علمي (خلية، إنزيم، وراثة...) أو اكتب:\n«نصائح للدراسة» • «اختبرني» • «مناهج السنة الأولى»";
+if(/(شكرا|شكر|thank)/.test(n))return "العفو! 🌿 بالتوفيق في دراستك.";
+if(/(من انت|ما اسمك|روبوت|robot)/.test(n))return "أنا روبوت S.N.V 🤖 بوضعين:\n① ذكاء محلي متخصص (بدون إنترنت)\n② ذكاء كامل عند ربط مفتاح Gemini المجاني في الأعلى ⚡";
+if(/(اختبرني|سؤال لي|qcm)/.test(n)){var x=Q[Math.floor(Math.random()*Q.length)];return "🧠 سؤال:\n"+x[0]+"\n"+x[1].map(function(o,i){return (i+1)+") "+o}).join("\n")+"\n\nالجواب: "+x[1][x[2]]}
+var r=findKB(q);if(r)return r;
+return "🤔 سؤالك خارج قاعدة معرفتي المحلية.\n\n① اربط مفتاح Gemini المجاني في الأعلى ⚡ وسأجيب عن أي شيء\n② أو جرّب: «اشرح لي المتقدرة» • «الفرق بين الميتوز والميوز» • «اختبرني»"}
+var aiKey="",aiHist=[];
+var AI_MODELS=["gemini-2.5-flash","gemini-flash-latest","gemini-2.0-flash"];
+function aiAsk(q,cb,mi){mi=mi||0;if(mi===0)aiHist.push({role:"user",parts:[{text:q}]});if(mi>=AI_MODELS.length){aiHist.pop();cb("⚠️ تعذر الاتصال حالياً.\n\n"+botReply(q));return}fetch("https://generativelanguage.googleapis.com/v1beta/models/"+AI_MODELS[mi]+":generateContent?key="+encodeURIComponent(aiKey),{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({system_instruction:{parts:[{text:"أنت مساعد تعليمي لطلبة السنة الأولى علوم الطبيعة والحياة (LMD الجزائر). أجب بالعربية منظمة بنقاط مع الأمثلة."}]},contents:aiHist.slice(-8)})}).then(function(r){return r.json()}).then(function(j){var t=j&&j.candidates&&j.candidates[0]&&j.candidates[0].content&&j.candidates[0].content.parts?j.candidates[0].content.parts.map(function(p){return p.text}).join(""):null;if(t){aiHist.push({role:"model",parts:[{text:t}]});cb(t)}else if(j&&j.error&&/no longer|not found|deprecated/i.test(j.error.message||"")){aiAsk(q,cb,mi+1)}else{aiHist.pop();cb("⚠️ "+((j&&j.error&&j.error.message)||"خطأ")+"\n\n"+botReply(q))}}).catch(function(){aiAsk(q,cb,mi+1)})}
+function send(){var inp=document.getElementById('ci');var t=inp.value.trim();if(!t)return;addMsg(t,'u');inp.value='';var log=document.getElementById('chatLog');var th=document.createElement('div');th.className='msg mb';th.textContent='💭 ...يفكر';log.appendChild(th);log.scrollTop=log.scrollHeight;var done=function(r){th.remove();addMsg(r||botReply(t),'b')};if(aiKey)aiAsk(t,done);else setTimeout(function(){done(botReply(t))},500)}
+function saveKey(){aiKey=document.getElementById('ak').value.trim();try{if(aiKey)localStorage.setItem('snv_ai_key',aiKey);else localStorage.removeItem('snv_ai_key')}catch(e){}document.getElementById('ak').value='';document.getElementById('ast').textContent=aiKey?"✅ متصل — مفتاحك محفوظ على جهازك فقط 🔒":"ℹ️ بدون مفتاح: ذكاء محلي"}
+try{var k=localStorage.getItem('snv_ai_key');if(k){aiKey=k;document.getElementById('ast').textContent="✅ متصل — مفتاحك محفوظ على جهازك فقط 🔒"}}catch(e){}
+(function(){var c=document.getElementById('chips');["اشرح لي المتقدرة","الفرق بين الميتوز والميوز","نصائح للدراسة","اختبرني"].forEach(function(t){var b=document.createElement('button');b.className='sp';b.style.margin='0';b.textContent=t;b.onclick=function(){document.getElementById('ci').value=t;send()};c.appendChild(b)})}
+)();
+addMsg("مرحباً! 👋 أنا روبوت S.N.V الذكي 🤖\nاسألني عن أي مفهوم علمي، أو اكتب:\n«نصائح للدراسة» • «اختبرني» • «مناهج السنة الأولى»\nويمكنك ربط مفتاح Gemini في الأعلى للذكاء الكامل ⚡",'b');
+</script>
+</body>
+</html>
